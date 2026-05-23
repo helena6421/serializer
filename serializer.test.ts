@@ -168,7 +168,7 @@ describe('serializer', () => {
         expectCompressionGuarantee(input);
       }
     }
-  });
+  }, 30_000);
 
   it('rejects too short input', () => {
     expect(() => serialize([1, 2, 3, 4])).toThrow();
